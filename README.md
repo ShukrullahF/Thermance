@@ -1,48 +1,47 @@
 # Thermance
 Thermance is a project where we created an automatic thermometer. The purpose of this project was to be able to measure body temperature without any human close contact.
 
-Automatic IR thermometer
+Automatic IR thermometer 
 
 Ali Alagha, Shukrullah Fayazi, Jesper Dahlström, Alexander Lundström
- 
+
+
 
 Abstract
 
-Medical technology today is getting more and more complicated out of a user perspective and there are a lot of separate machines for different purposes. For hospital personnel especially, it is very difficult to keep track of and to learn how all the devices work. We want to merge and connect different equipment to the same device. Combining a carbon dioxide meter with a thermometer, which can detect the temperature of a person as well as the temperature of a room will facilitate the work for the staff.
+There is a problem determining the temperature of a person whether it is in a hospital, an airport or another establishment. The problem is that it needs a staff person or an invasive method. The temperature measurement will be able to measure the temperature without a person measuring it or by an invasive method. By connecting a motion sensor with a temperature measurement device, we created a device that neither needed a person doing the measurement or an invasive method.     
 
 
 Introduction
 
-The society we live in today requires our technical products to be fast, efficient and user friendly. Also, in times of a global pandemic it is important to keep physical distance to other people, especially in public environments. One method to examine quickly whether a person is completely healthy or not is to measure their body temperature and watch for fever. This is a common method used in public places e.g. hospitals, airports and events. This method requires another person to hold a thermometer against the examined person's forehead, which breaks the rule of physical distancing. Alternative solutions to this type of easier examination for Covid-19 is to do a test with a manual thermometer. [1] A manual thermometer can show whether a person is having a fever or not, but requires close physical contact with another person.
-Our solution to the problem where close interaction between people is forced because of the handheld thermometer is an automatic
+There is a pandemic in the world right now and people still feel the need to travel the world. There are a few characteristic symptoms related to the pandemic. Fever is one of the symptoms of the pandemic right now. You can’t travel if you are feverish. Making sure that a person doesn’t have a fever and is able to travel is our main purpose in our creation of the temperature measurement. We want to make the staff members feel as safe as they can by not catching the virus. Also, we want the passengers to feel safe and not harm them by an invasive method. The temperature measurement detect
 
+There are a different number of alternative solutions to this problem at the moment. One of the other solutions is by using a handheld temperature device that looks like a gun. The reading of the temperature can be used with either thermal or IR thermometer. In this case you need a person to take the temperature and read the result [1][2]. The temperature can also be taken invasively, this is not very common at the airport. This is more common at the hospital or other health care institutions in comparison to the airport's temperature measurements [3]. 
 
-Evaluation
-
-We connect our device with a USB port to our PC. In this way, we power our circuit with 5V. Our program code is built in a way that when our PIR motion sensor registers a movement, it activates our thermal camera. When activated, our camera measures maximum, minimum, and average temperature of all the pixels in the image. The maximum temperature is what we use as a reference point for the person's body
-thermometer, as physical distancing is recognised as an efficient method in limiting the spread of Covid-19. [2] Even when using a face mask, distancing is still recommended.[3] Therefore, a thermometer that works automatically without any human interaction is optimal in this case. This automatic thermometer will provide results of people's body temperatures, and also provide room temperature. A carbon dioxide sensor will be attached in an upcoming version, and will be used to tell whether a room needs ventilation. This measurement is important, as a high value may increase the risk of spreading diseases and viruses. [4]
-
+Our solution to the stated problem is by combining a motion sensor and a thermal temperature device.  In our case we do not need a staff member controlling the temperature and they can be at a safe distance by not taking the temperature themselves. We have applied a diode system, where different colors represent different results depending on the color shown. Green for approved and red for denied entrance. If the passenger's temperature is approved by the system and the diodes connected to it, it is safe for the passenger to enter the airplane. Otherwise the diode will turn red and the temperature is not approved to enter the plane. 
 
 Design
 
-The device consists of an ESP32 microcontroller with built-in wifi and Bluetooth. Connected to the microcontroller is a thermal camera named Mlx90640 that contains a thermopile sensor. This camera measures the surface temperature of an object and forms a thermographic image with a resolution of 32x24 pixels. The component that starts the measurement is a PIR motion sensor, which is used to detect movement from humans and when detecting movement starts the measuring process. Fig(1) displays our circuit.
+The device consists of an ESP32 microcontroller with built-in wifi and Bluetooth. Connected to the microcontroller is a thermal camera named Mlx90640 that contains a thermopile sensor. This camera measures the surface temperature of an object and forms a thermographic image with a resolution of 32x24 pixels. The component that starts the measurement is a PIR motion sensor, which is used to detect movement from humans and when detecting movement it starts the measuring process. We created a website that includes a surveillance and registration system. Fig (1) displays the finished product with the 3D printed box that carries all the components and makes it able to mount the device on the wall.
 Fig (1)
-temperature. Average temperature will be seen as the room temperature, and minimum temperature is the pixel containing the lowest temperature. When the temperature deviates and displays a value that is above our limit, it will start an alarm signal and a red light will appear.
+
+Evaluation 
+
+The device is connected via USB to a PC. In this way, we power the circuit with 5V. Our program code is built in a way that when our PIR motion sensor registers a movement, it activates our thermal camera. When activated, our camera measures maximum, minimum, and average temperature of all the pixels in the image. The maximum temperature is what we use as a reference point for the person's body temperature, whereas the minimum temperature is the pixel containing the lowest temperature. When the temperature deviates and displays a value that is above our limit, it will trigger the redlight. Otherwise the green light will appear. 
+
 One disadvantage with the performance of the thermal camera is that it requires the person to stand very close to the camera to acquire an accurate result. The further away from the camera the person stands, the more inaccurate the result will be. On the other hand, the results are accurate when the person stands close to the camera as shown in fig(2) below.
-Fig(2)
 
-The usage of this device is ranging over a wide area. What makes the device so powerful is that it works automatically without the requirements of any user inputs other than their body in front of the camera. The image shown in fig(2) is
-Sources and references simply for surveillance. If a value input that is deviating abnormally occurs, the surveillor can examine the image and search for abnormalities. The device will be further developed and include more features and components to display more measurements as well as include storage of input data. One key component that will be included further on is a carbon dioxide sensor.
-
-
+The usage of this device is ranging over a wide area. What makes the device so powerful is that it works automatically without the requirements of any user inputs other than their body in front of the camera. The image shown in fig(3) is simply for surveillance. If a value input that is deviating abnormally occurs, the surveillor can examine the image and search for any abnormalities. 
+Before making a measurement it is possible for the user to register their name and ID number, in this way it is possible to store results and connect those to unique users.
 
 Conclusion
 
-The idea of putting two devices together that measure different values will enhance both the safety in a medical room as well as simplify the work for personnel. Primarily the thermometer will assure that a person has adequate body temperature. Secondly the thermometer together with the carbon dioxide meter will ensure that the temperature as well as air flow in a room is sufficient, and reduce further risk of spreading infections. The usage areas of this device are of a wide range.
+Combining a motion sensor and thermal temperature measurement device to facilitate the work with high body temperatures, mainly at airports.  The aim for this thermometer is for the temperature measurement to be handled with care and ensure that everyone can feel safer. To light up a diode will give the traveler an answer right away if it is possible for them to travel. By motion sensing and standing in front of the thermometer the diodes will brighten up. The color green indicates that your surface body temperature is approved whereas red indicates that your surface body temperature is too high to travel.
 
-FOR FIGURES SEE SEPARATE DOCUMENT. 
+FOR FIGURES SEE SEPARATE DOCUMENT! 
 
- [1] https://www.folkhalsomyndigheten.se/the-public-health-agency-of-sweden/communicable-disease-control/ covid-19/covid-19-testing/screening-at-workplaces-and-schools/ [12/10 -21 10:45]
-[2] https://www.who.int/westernpacific/emergencies/covid-19/information/physical-distancing [12/10 -21 10:00] [3] https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html#stay6ft%20
-[12/10 -21 10:15]
-[4] https://www.rotronic.com/en/humidity-measurement-feuchtemessung-temperaturmessungs/co2? fbclid=IwAR1OgWMEgaMm0JAEDzEWzmromXZ3eFqyL7C2uOT2uSuyemHsNw1VChf4604 [12/10 -21 14:00]
+Sources and references 
+
+[1] https://www.cbc.ca/news/politics/airline-passenger-temperature-checks-1.5609564  (4/1-22, 10:42)
+[2]https://www.flir.com/discover/instruments/whats-the-difference-between-ir-thermometers-and-thermal-cameras/ (4/1-22, 11:52)
+[3] https://www.processindustryforum.com/article/invasive-temperature-measurement-vs-non-invasive-temperature-measurement-techniques (4/1-22, 10:55)
