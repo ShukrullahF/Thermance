@@ -28,14 +28,11 @@ Design
 The device consists of an ESP32 microcontroller with built-in wifi and Bluetooth. Connected to the microcontroller is a thermal camera named Mlx90640 that contains a thermopile sensor. This camera measures the surface temperature of an object and forms a thermographic image with a resolution of 32x24 pixels. The component that starts the measurement is a PIR motion sensor, which is used to detect movement from humans and when detecting movement starts the measuring process. Fig(1) displays our circuit.
 Fig (1)
 temperature. Average temperature will be seen as the room temperature, and minimum temperature is the pixel containing the lowest temperature. When the temperature deviates and displays a value that is above our limit, it will start an alarm signal and a red light will appear.
-One disadvantage with the performance of the thermal camera is that it requires the person to
- 
-stand very close to the camera to acquire an accurate result. The further away from the camera the person stands, the more inaccurate the result will be. On the other hand, the results are accurate when the person stands close to the camera as shown in fig(2) below.
+One disadvantage with the performance of the thermal camera is that it requires the person to stand very close to the camera to acquire an accurate result. The further away from the camera the person stands, the more inaccurate the result will be. On the other hand, the results are accurate when the person stands close to the camera as shown in fig(2) below.
 Fig(2)
+
 The usage of this device is ranging over a wide area. What makes the device so powerful is that it works automatically without the requirements of any user inputs other than their body in front of the camera. The image shown in fig(2) is
-Sources and references
-simply for surveillance. If a value input that is deviating abnormally occurs, the surveillor can examine the image and search for abnormalities.
-The device will be further developed and include more features and components to display more measurements as well as include storage of input data. One key component that will be included further on is a carbon dioxide sensor.
+Sources and references simply for surveillance. If a value input that is deviating abnormally occurs, the surveillor can examine the image and search for abnormalities. The device will be further developed and include more features and components to display more measurements as well as include storage of input data. One key component that will be included further on is a carbon dioxide sensor.
 
 
 
@@ -43,7 +40,7 @@ Conclusion
 
 The idea of putting two devices together that measure different values will enhance both the safety in a medical room as well as simplify the work for personnel. Primarily the thermometer will assure that a person has adequate body temperature. Secondly the thermometer together with the carbon dioxide meter will ensure that the temperature as well as air flow in a room is sufficient, and reduce further risk of spreading infections. The usage areas of this device are of a wide range.
 
-
+FOR FIGURES SEE SEPARATE DOCUMENT. 
 
  [1] https://www.folkhalsomyndigheten.se/the-public-health-agency-of-sweden/communicable-disease-control/ covid-19/covid-19-testing/screening-at-workplaces-and-schools/ [12/10 -21 10:45]
 [2] https://www.who.int/westernpacific/emergencies/covid-19/information/physical-distancing [12/10 -21 10:00] [3] https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html#stay6ft%20
